@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/spacing_xlarge"
+    android:background="@color/QRCodeWhiteColor">
+
+    <TextView
+        android:id="@+id/orderstatusupdate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="asfasf"
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/orderstatusupdate_amt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Total Order Amount"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/orderstatusupdate_vtxt_lyt"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/hint_ordervamount"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        android:layout_margin="@dimen/spacing_large">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/orderstatusupdate_vamt_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:inputType = "number"
+            android:maxLength="12"
+            android:digits="1234567890"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textAlignment="center"
+            android:imeOptions="actionDone"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/orderstatusupdate_txt_lyt"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/hint_orderamount"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        android:layout_margin="@dimen/spacing_large">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/orderstatusupdate_amt_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:inputType = "number"
+            android:maxLength="12"
+            android:digits="1234567890"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textAlignment="center"
+            android:imeOptions="actionDone"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+</LinearLayout>

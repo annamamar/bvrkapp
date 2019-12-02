@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/QRCodeWhiteColor"
+    android:focusableInTouchMode="true"
+    android:layout_margin="@dimen/spacing_large"
+    android:padding="@dimen/spacing_large"
+    >
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_xlarge"
+        android:hint="@string/hint_location"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        android:id="@+id/location_txt_lyt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/location_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/regex_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textAlignment="center"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/location_add_btn"
+        android:background="@drawable/amar_btn_glossystyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_large"
+        android:layout_gravity="center"
+        android:gravity="center|center_vertical"
+        android:keepScreenOn="true"
+        android:text="Add Location"
+        android:textStyle="bold"
+        android:textColor="@color/red_A700"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+        />
+</LinearLayout>

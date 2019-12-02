@@ -1,0 +1,383 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/overlay_light_40"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        >
+
+        <TextView
+            android:background="@drawable/style_nice_btn_enabled"
+            android:padding="@dimen/spacing_medium"
+            android:id="@+id/showorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/QRCodeWhiteColor"
+            android:textAlignment="center"
+            android:text="Create New Order"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/spacing_middle"
+            android:drawableEnd="@drawable/img_dropdown"
+            android:drawableTint="@color/QRCodeWhiteColor"
+            android:drawablePadding="2dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/order_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_large">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:id="@+id/order_date_text"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_rounded_shape"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:keepScreenOn="true"
+                    android:padding="10dp"
+                    android:text="Sep 18th 2019"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <Spinner
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:id="@+id/order_type_spinner"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:dropDownSelector="@color/amber_400"
+                android:entries="@array/array_order_type"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/client_sel_spinner"
+                style="@style/Widget.MaterialComponents.ChipGroup"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:spinnerMode="dialog"
+                android:entries="@array/array_client_type"/>
+
+            <TextView
+                android:id="@+id/order_credit"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:text="Rs.0"
+                android:textColor="@color/red_900"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tars_txt_lyt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_tars"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tars_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="1234567890"
+                android:inputType = "number"
+                android:maxLength="4"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAlignment="center"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/weight_txt"
+                />
+
+            <!--
+            android:nextFocusDown="@+id/.."
+            android:nextFocusLeft="@+id/.."
+            android:nextFocusRight="@+id/.."
+            android:nextFocusUp="@+id/.." -->
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weight_txt_lyt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_weight"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/weight_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="1234567890"
+                android:maxLength="5"
+                android:inputType = "number"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAlignment="center"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/vendor_amt_txt"
+                android:nextFocusLeft="@+id/tars_txt"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+    <Spinner
+        android:id="@+id/vendor_sel_spinner"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:spinnerMode="dialog"
+        android:entries="@array/array_vendor_type"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/vendor_amt_txt_lyt"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:gravity="center|center_horizontal"
+        android:hint="@string/hint_amount"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vendor_amt_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:inputType = "number"
+            android:maxLength="9"
+            android:digits="1234567890"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textAlignment="center"
+            android:imeOptions="actionDone"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bulk_order_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_bulkordertip"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        />
+
+    <LinearLayout
+        android:id="@+id/bulk_order_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/labourchrg_txt_lyt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_labourchrgs"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/labourchrg_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="4"
+                android:digits="1234567890"
+                android:inputType = "number"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAlignment="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/commisn_txt_lyt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_commission"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/commisn_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="4"
+                android:digits="1234567890"
+                android:inputType = "number"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAlignment="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+        <Button
+        android:id="@+id/order_add_btn"
+        android:background="@drawable/amar_btn_glossystyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:gravity="center|center_vertical"
+        android:keepScreenOn="true"
+        android:padding="5dp"
+        android:text="Order Entry"
+        android:textStyle="bold"
+        android:textColor="@color/red_A700"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/spacing_small">
+
+            <TextView
+            android:id="@+id/orders_count"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorAccentDark"
+            android:text="  Total orders : 54515451"/>
+
+            <Button
+                android:id="@+id/orders_filter"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="@dimen/spacing_xxlarge"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/ic_filter_list_black_24dp"
+                android:soundEffectsEnabled="true"
+                />
+
+            <Button
+                android:id="@+id/orders_reload"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/spacing_large"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAllCaps="false"
+                android:soundEffectsEnabled="true"
+                android:background="@android:drawable/ic_menu_rotate"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_margin="@dimen/spacing_medium"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/order_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarSize="1px"
+            android:layout_margin="@dimen/spacing_small"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

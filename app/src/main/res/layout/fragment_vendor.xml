@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:background="@color/overlay_light_40"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/QRCodeWhiteColor">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/spacing_medium"
+        app:cardElevation="@dimen/spacing_medium"
+        android:layout_margin="@dimen/spacing_medium"
+        app:contentPadding="@dimen/spacing_medium"
+        app:cardPreventCornerOverlap="true"
+        app:cardBackgroundColor="@color/amber_900">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/vendor_usercount"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:padding="@dimen/spacing_medium"
+        android:gravity="center|center_horizontal"
+        android:textColor="@color/QRCodeWhiteColor"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:text="Vendors : 10"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/vendor_adduser"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/QRCodeWhiteColor"
+            android:src="@drawable/ic_person_add_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/vendor_reload"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:textAllCaps="false"
+            android:soundEffectsEnabled="true"
+            android:backgroundTint="#ffffff"
+            android:background="@android:drawable/ic_menu_rotate"
+            />
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/vendor_adduserlayout"
+        layout="@layout/fragment_adduser_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vendor_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:scrollbarSize="1pt"/>
+
+    <TextView
+        android:padding="@dimen/spacing_medium"
+        android:id="@+id/vendor_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Vendor orders"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/spacing_middle"
+        android:background="@drawable/style_rounded_shape"
+        android:drawableEnd="@drawable/img_dropdown"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/vendor_ordersearch_lyt"
+        android:layout_margin="@dimen/spacing_small">
+
+        <Spinner
+            android:id="@+id/vendor_ordersearch_sel"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/spacing_small"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/QRCodeWhiteColor"
+            android:id="@+id/vendor_ordersearch_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_medium"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:scrollbarSize="1pt"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
