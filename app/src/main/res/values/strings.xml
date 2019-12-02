@@ -1,3 +1,56 @@
 <resources>
-    <string name="app_name">Bvrk</string>
+    <string name="app_name">Bobby</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">Orders</string>
+    <string name="tab_text_2">Clients</string>
+    <string name="tab_text_3">Vendors</string>
+    <string name="hint_tars">no. of tars</string>
+    <string name="hint_weight">Weight (kgs)</string>
+    <string name="tab_a_label">orders</string>
+    <string name="tab_b_label">Clients</string>
+    <string name="tab_c_label">Vendors</string>
+    <string name="hint_amount">Rs.0</string>
+    <string name="hint_labourchrgs">Labour chrgs.</string>
+    <string name="hint_commission">commission</string>
+    <string name="hint_bulkordertip">Applicable for Bulk Order</string>
+
+    <string name="hint_username">username</string>
+    <string name="regex_username">abcdefghijkLmnopqrstuvwxyz</string>
+    <string name="hint_name">Full name</string>
+    <string name="regex_name">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXZY</string>
+    <string name="hint_mobile">Mobile</string>
+    <string name="regex_mobile">1234567890</string>
+    <string name="hint_address">Address</string>
+    <string name="regex_address">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXZY-,\n1234567890</string>
+    <string name="hint_location">Place Name</string>
+    <string name="hint_orderamount">Client amount</string>
+    <string name="hint_ordervamount">Vendor amount</string>
+
+    <string-array name="order_type">
+        <item>#e91e63</item>
+    </string-array>
+
+    <string-array name="array_order_type">
+        <item>Type</item>
+        <item>Bulk</item>
+        <item>Single</item>
+    </string-array>
+
+    <string-array name="array_client_type">
+        <item>Select client</item>
+        <item>Add New</item>
+    </string-array>
+
+    <string-array name="array_vendor_type">
+        <item>Select Vendor</item>
+        <item>Add New</item>
+    </string-array>
+
+    <string-array name="array_location_name">
+        <item>Select Location</item>
+        <item>Add New</item>
+    </string-array>
+
+
 </resources>
