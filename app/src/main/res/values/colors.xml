@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+
+
     <color name="black_overlay">#66000000</color>
     <color name="QRCodeWhiteColor">#ffffff</color>
     <color name="QRCodeBlackColor">#000000</color>
@@ -339,5 +341,4 @@
         <item type="color">#607d8b</item>
         <item type="color">#ff9800</item>
     </array>
-
 </resources>

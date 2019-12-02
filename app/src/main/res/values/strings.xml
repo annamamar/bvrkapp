@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Bobby</string>
+
+
+
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="tab_text_1">Orders</string>
@@ -51,6 +54,4 @@
         <item>Select Location</item>
         <item>Add New</item>
     </string-array>
-
-
 </resources>
